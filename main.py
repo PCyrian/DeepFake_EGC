@@ -6,6 +6,7 @@ from time import time
 from moviepy.editor import VideoFileClip, AudioFileClip, concatenate_audioclips
 from TTS.api import TTS
 import torch
+from cleaning import initial_cleaning
 
 class VideoAudioApp:
     def __init__(self, root):
@@ -14,6 +15,7 @@ class VideoAudioApp:
         self.root.geometry("600x400")
 
         self.video_file = ""
+        self.rough_tts_output_file = "rough_tts_output.mp3"
         self.tts_output_file = "tts_output.wav"
         self.output_video_file = "output_video.mp4"
 
@@ -79,7 +81,8 @@ class VideoAudioApp:
         def process_task():
             try:
                 audio_extraction_time, video = extract_audio(self.video_file, "extracted_audio.wav")
-                tts_generation_time = generate_tts_audio(self.textbox.get(), "extracted_audio.wav", self.tts_output_file)
+                tts_generation_time = generate_tts_audio(self.textbox.get(), "extracted_audio.wav", self.rough_tts_output_file)
+                initial_cleaning(self.rough_tts_output_file, self.tts_output_file)
                 audio_replacement_time, video_with_new_audio = replace_audio_in_video(video, self.tts_output_file, self.output_video_file)
 
                 total_processing_time = audio_extraction_time + tts_generation_time + audio_replacement_time
