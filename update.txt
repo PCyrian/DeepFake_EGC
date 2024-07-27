@@ -1,0 +1,45 @@
+Monday 22/07:
+
+    - Reminder from the supervisor to keep an update.txt file on Git with daily progress because of remote work.
+    - Told to re-test speech-to-speech conversion, justify decisions in writing, and improve TTS sync with video start.
+    - Started working on the script to detect the start of speech in videos.
+    - Began refactoring code in various units and classes for better structure and clarity.
+    - Added comments to the code for better documentation and readability.
+
+
+Tuesday 23/07:
+
+    - Continued working on the speech detection script.
+    - ##Encountered an issue##: the script always records 29 seconds instead of 9. Tried to figure out the issue but no luck yet.
+    - Tweaked the UI to include an iteration field for creating multiple output videos in a single request. This should make testing more efficient.
+    - More code refactoring and commenting.
+
+
+Wednesday 24/07:
+
+    - More UI improvements.
+    - Added time estimation to the UI to give a better idea of processing times.
+    - Documented the UI changes and why they were made.
+    - Continued code refactoring and adding comments.
+    - Started digging into DeepFaceLab's repo to understand the technologies they use.
+
+
+Thursday 25/07:
+
+    - Tried re-testing the speech-to-speech conversion.
+    - Still running into errors; the library seems unstable.
+    - Decided to pause further testing on speech-to-speech conversion until there's a more stable library version.
+    - Wrote down why this decision was made.
+    - Kept researching DeepFaceLab's tech, focusing on how they implement things.
+
+
+Friday 26/07:
+
+    - Finalized and tested the UI changes; everything works as expected.
+    - Wrote up justifications for each decision made this week, including:
+        - The instability of the speech-to-speech conversion library.
+        - Adding the iteration field and time estimation in the UI.
+        - Issues with the speech detection script.
+    - Compiled and committed all updates to the Git repository.
+    - Continued looking into DeepFaceLab's tech and documenting findings.
+    - Finished code refactoring and made sure all relevant sections are well-commented
