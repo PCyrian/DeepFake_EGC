@@ -43,3 +43,14 @@ Friday 26/07:
     - Compiled and committed all updates to the Git repository.
     - Continued looking into DeepFaceLab's tech and documenting findings.
     - Finished code refactoring and made sure all relevant sections are well-commented
+
+
+Monday 29/07:
+
+    - Got new instructions and guidance :
+        - As previously mentioned, need to emphasize more on researching alternatives technologies even if they don't exactly fit my our use-case.
+        - Keep 3-4 exemple french target audio files, and automate cross-testing between all 12 possible voice combinations.
+        - Prepare a video directory in Git, with at least 4 instances per voice combination, good and bad.
+        - Further research wav2Lip and babelfish as well as the Sync API as possible technologies as well as other STS models on Huggingface for exemple.
+        - If TTS' by Coqui lib failed inference for freevc24, attempt to use the docker version or start on a new clean env.
+        - Research https://huggingface.co/nvidia/bigvgan_v2_44khz_128band_512x for post-processing
