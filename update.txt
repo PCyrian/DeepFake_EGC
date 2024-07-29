@@ -54,3 +54,4 @@ Monday 29/07:
         - Further research wav2Lip and babelfish as well as the Sync API as possible technologies as well as other STS models on Huggingface for exemple.
         - If TTS' by Coqui lib failed inference for freevc24, attempt to use the docker version or start on a new clean env.
         - Research https://huggingface.co/nvidia/bigvgan_v2_44khz_128band_512x for post-processing
+        - Research https://synclabs.so/ for possible lip-syncing API
