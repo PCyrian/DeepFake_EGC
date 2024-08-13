@@ -1,4 +1,4 @@
-Monday 22/07:
+**22/07**
 
     - Reminder from the supervisor to keep an update.txt file on Git with daily progress because of remote work.
     - Told to re-test speech-to-speech conversion, justify decisions in writing, and improve TTS sync with video start.
@@ -6,16 +6,18 @@ Monday 22/07:
     - Began refactoring code in various units and classes for better structure and clarity.
     - Added comments to the code for better documentation and readability.
 
+---
 
-Tuesday 23/07:
+**23/07**
 
     - Continued working on the speech detection script.
     - ##Encountered an issue##: the script always records 29 seconds instead of 9. Tried to figure out the issue but no luck yet.
     - Tweaked the UI to include an iteration field for creating multiple output videos in a single request. This should make testing more efficient.
     - More code refactoring and commenting.
 
+---
 
-Wednesday 24/07:
+**24/07**:
 
     - More UI improvements.
     - Added time estimation to the UI to give a better idea of processing times.
@@ -23,8 +25,9 @@ Wednesday 24/07:
     - Continued code refactoring and adding comments.
     - Started digging into DeepFaceLab's repo to understand the technologies they use.
 
+---
 
-Thursday 25/07:
+**25/07**
 
     - Tried re-testing the speech-to-speech conversion.
     - Still running into errors; the library seems unstable.
@@ -32,8 +35,9 @@ Thursday 25/07:
     - Wrote down why this decision was made.
     - Kept researching DeepFaceLab's tech, focusing on how they implement things.
 
+---
 
-Friday 26/07:
+**26/07**
 
     - Finalized and tested the UI changes; everything works as expected.
     - Wrote up justifications for each decision made this week, including:
@@ -44,8 +48,9 @@ Friday 26/07:
     - Continued looking into DeepFaceLab's tech and documenting findings.
     - Finished code refactoring and made sure all relevant sections are well-commented
 
+---
 
-Monday 29/07:
+**29/07**
 
     - Got new instructions and guidance :
         - As previously mentioned, need to emphasize more on researching alternatives technologies even if they don't exactly fit my our use-case.
@@ -55,3 +60,44 @@ Monday 29/07:
         - If TTS' by Coqui lib failed inference for freevc24, attempt to use the docker version or start on a new clean env.
         - Research https://huggingface.co/nvidia/bigvgan_v2_44khz_128band_512x for post-processing
         - Research https://synclabs.so/ for possible lip-syncing API
+
+---
+
+**08/08**  
+- Had a meeting with my mentor. He suggested focusing on lip-syncing as he felt the audio part was good enough for now. I disagreed but will proceed as instructed.  
+- Spent the day updating output file names to prevent overwriting and keep a record of all test outputs.
+
+---
+
+**09/08**  
+- Continued working on Wav2Lip setup.  
+- Realized that Wav2Lip only supports Python 3.6, which wasn't clearly specified in the README.  
+- The initial installation failed due to having the wrong Python version.
+
+---
+
+**10/08**  
+- Installed Python 3.6.0, but ran into another issue: Torch 1.1.0 isn't available for Python 3.6.0.  
+- Considered needing a higher version of Python 3.6, but still unsure of the exact version required.  
+- Spent time searching the issues tab on the Wav2Lip repository for solutions, but most issues were minor and unhelpful.
+
+---
+
+**11/08**  
+- Found an issue in the Wav2Lip repo about running it on Windows. The suggested solution was to use WSL.  
+- Frustrated by the prospect of needing to set up a Linux VM or dual boot just to test part of the project.  
+- Ventured into Linux setup considerations, knowing the pain of dealing with missing DLLs and NVIDIA/CUDA issues on Linux.
+
+---
+
+**12/08**  
+- Debated the best approach to proceed: whether to set up a Linux VM, dual boot, or continue struggling with the Windows setup.  
+- Decided to start the process of setting up a Linux environment while considering potential workarounds for the NVIDIA/CUDA issues.
+
+---
+
+**13/08**  
+- Continued the setup of the Linux environment, working through dependency issues and preparing for potential CUDA/NVIDIA challenges.  
+- Planned to test Wav2Lip on the new setup as soon as everything is configured correctly.
+
+---

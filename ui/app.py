@@ -7,6 +7,7 @@ from post_processing.cleaning import initial_cleaning
 import os
 import torch
 from time import time
+from datetime import datetime
 
 
 class DeepFakeApp:
@@ -22,6 +23,7 @@ class DeepFakeApp:
 
         self.setup_ui()
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'  # Use GPU if available, otherwise fallback to CPU
+        print("Using device: {}".format(self.device))
 
     def setup_ui(self):
         # Set up the UI components for the application
@@ -56,17 +58,22 @@ class DeepFakeApp:
 
         def process_task():
             try:
+                base_video_file = os.path.basename(self.video_file)
+
+                extracted_audio_filename = "tmp/" + base_video_file + "-extracted_audio.wav"
                 # Extract audio from the selected video file
-                audio_extraction_time, video = extract_audio(self.video_file, "extracted_audio.wav")
+                audio_extraction_time, video = extract_audio(self.video_file, extracted_audio_filename)
+
 
                 for iteration in range(iterations):
                     total_time = 0
-                    tts_output_file = f"tts_output_{iteration}.wav"
-                    output_video_file = self.output_video_file_template.format(iteration=iteration)
+                    date_str = datetime.now().strftime('%Y%m%d_%H%M%S')
+                    tts_output_file = f"tmp/tts_{date_str}_{base_video_file}_{iteration}.wav"
+                    output_video_file = f"output/video_{base_video_file}_{iteration}_{date_str}.mp4"
                     start_time = time()
 
                     # Generate TTS audio from text input
-                    tts_generation_time = generate_tts_audio(self.textbox.get(), "extracted_audio.wav", tts_output_file, self.device)
+                    tts_generation_time = generate_tts_audio(self.textbox.get(), extracted_audio_filename, tts_output_file, self.device)
                     # Clean the generated TTS audio
                     initial_cleaning(tts_output_file, self.tts_output_file)
                     # Replace the original video audio with the new TTS audio

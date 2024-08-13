@@ -21,7 +21,7 @@ This repository is for developing an automated deepfake pipeline, created during
 ## Usage
 
 1. Clone the repository.
-2. 'pip install -r requirements.txt'
+2. `pip install -r requirements.txt`
 3. Run `main.py` to start the application.
 4. Check `update.txt` for progress and changes.
 
