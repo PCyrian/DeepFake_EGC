@@ -99,5 +99,9 @@
 **13/08**  
 - Continued the setup of the Linux environment, working through dependency issues and preparing for potential CUDA/NVIDIA challenges.  
 - Planned to test Wav2Lip on the new setup as soon as everything is configured correctly.
+- Should investigate potential solution : https://github.com/Rudrabha/Wav2Lip/issues/185 though I tried it already.
+- Update, the code appears to have been run on python 3.5.2 or older, then vaguely described as working in newer version best thus the requirement update to "3.6+" than back to 3.6
+- The commit changing the required python version in the readme didn't update the requirements nor the code, nor did any following. Repo might run better in 3.5.6
+- Possible outdated tutorial worth looking into even if it uses google colab instead of being local "https://www.youtube.com/watch?v=Ic0TBhfuOrA"
 
 ---
