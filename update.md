@@ -195,4 +195,5 @@
     - Most issues of the last year have not been answered or solved. It is becoming concerning.
     - Might have to stick to CPU only after all.
     - Might have a meeting with google researchers on free time, might ask for advice.
-
+    - potential Wav2Lip alternative mentioned in Issues (https://github.com/OpenTalker/video-retalking)
+    - potential unofficial branch of Wav2Lip might be more maintained. (https://github.com/HassanMuhammadSannaullah/Wav2lip-Fix-For-Inference)
