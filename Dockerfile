@@ -48,5 +48,5 @@ RUN mkdir ./checkpoints && \
 # Expose the directory where results will be saved
 VOLUME ["/video-retalking/results"]
 
-# Command to run inference (replace with actual paths and options as necessary)
+# Command to run inference
 CMD ["python3", "inference.py", "--face", "examples/face/1.mp4", "--audio", "examples/audio/1.wav", "--outfile", "results/output.mp4"]
