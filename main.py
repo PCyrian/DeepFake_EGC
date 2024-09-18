@@ -1,7 +1,5 @@
-from ui.app import DeepFakeApp
-import customtkinter as ctk
+from ui import app
 
 if __name__ == "__main__":
-    root = ctk.CTk()
-    app = DeepFakeApp(root)
-    root.mainloop()
+    ui = app.build_ui()
+    ui.launch()
