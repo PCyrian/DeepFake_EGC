@@ -25,3 +25,7 @@ This repository is for developing an automated deepfake pipeline, created during
 3. Run `main.py` to start the application.
 4. Check `update.txt` for progress and changes.
 
+## Prerequisites
+1. Python 3.10.11
+2. ffmpeg
+3. requirements.txt
