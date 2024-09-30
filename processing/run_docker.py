@@ -55,7 +55,7 @@ def run_video_retalking(video_file, audio_file, output_file):
 
     # Build the Docker command to run the container
     command = [
-        "docker", "run", "--rm", "--gpus", "all",
+        "docker", "run", "--privileged", "--rm", "--gpus", "all",
         "--name", container_name,
         "-v", f"{os.path.abspath(video_file)}:{container_video_path}",
         "-v", f"{os.path.abspath(audio_file)}:{container_audio_path}",
