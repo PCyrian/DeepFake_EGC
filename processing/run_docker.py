@@ -36,7 +36,6 @@ def concatenate_videos(video_a, video_b, output_file):
         print(f"Error in concatenating videos: {str(e)}")
         return False
 
-
 def run_video_retalking(video_file, audio_file, output_file):
     start_time = time.time()
 
@@ -53,10 +52,10 @@ def run_video_retalking(video_file, audio_file, output_file):
 
     container_name = "video_retalking-image"
 
-    # Build the Docker command to run the container
+    # Build the Podman command to run the container
     command = [
-        "docker", "run", "--privileged", "--rm", "--gpus", "all",
-        "--name", container_name,
+        "podman", "run", "--rm", "--name", container_name,
+        "--gpus", "all",  # Podman GPU support may require additional configuration
         "-v", f"{os.path.abspath(video_file)}:{container_video_path}",
         "-v", f"{os.path.abspath(audio_file)}:{container_audio_path}",
         "-v", f"{os.path.abspath(host_output_dir)}:/video-retalking/results",
